@@ -23,11 +23,11 @@
   "author": "JaeHyuk Kim",
   "license": "MIT",
   "dependencies": {
-    "winston": "2.2.0",
-    "winston-daily-rotate-file": "^1.7.2"
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^3.9.0"
   },
   "devDependencies": {
-    "jshint": "^2.9.4",
-    "standard-version": "^4.0.0"
+    "jshint": "^2.10.2",
+    "standard-version": "^4.4.0"
   }
 }

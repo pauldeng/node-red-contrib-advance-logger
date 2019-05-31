@@ -1,7 +1,7 @@
 var winston = require('winston');
 require('winston-daily-rotate-file');
 
-var logger = new winston.Logger({
+var logger = new winston.createLogger({
     exitOnError: false,
     level: 'info',
     transports: [
@@ -18,7 +18,7 @@ var logger = new winston.Logger({
     ]
 });
 
-winston.handleExceptions(new winston.transports.File({ filename: 'exceptions.log' }));
+winston.exceptions.handle(new winston.transports.File({ filename: 'exceptions.log' }));
 
 setInterval(function () {
     logger.log('info', 'Hello distributed log files!');

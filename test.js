@@ -1,6 +1,6 @@
 var winston = require('winston');
 
-var logger = new winston.Logger({
+var logger = new winston.createLogger({
     exitOnError: false,
     level: 'info',
     transports: [
