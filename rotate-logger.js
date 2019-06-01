@@ -54,7 +54,7 @@ module.exports = function (RED) {
             sendDebug({id: this.id, name: this.name, topic: msg.topic, msg: msg[complete], _path: msg._path});
           }
           if (fileLog !== false || consoleLog !== false) {
-            logger.log('info', JSON.stringify(msg));
+            logger.log('info', JSON.stringify(msg[complete]));
           }
         }
       }
