@@ -24,7 +24,7 @@ var logger = new winston.createLogger({
     ]
 });
 
-winston.handleExceptions(new winston.transports.File({ filename: 'exceptions.log' }));
+winston.exceptions.handle(new winston.transports.File({ filename: 'exceptions.log' }));
 
 setInterval(function () {
     logger.log('info', 'Hello distributed log files!');

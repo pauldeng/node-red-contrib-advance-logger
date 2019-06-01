@@ -6,7 +6,7 @@ module.exports = function (RED) {
 
   function AdvanceLoggerNode(config) {
     var winston = require('winston');
-    winston.handleExceptions(new winston.transports.File({filename: 'exceptions.log'}));
+    winston.exceptions.handle(new winston.transports.File({filename: 'exceptions.log'}));
     RED.nodes.createNode(this, config);
     var logger = null;
     var prefix = config.prefix;
@@ -33,7 +33,7 @@ module.exports = function (RED) {
       }));
     }
 
-    logger = new winston.Logger({
+    logger = new winston.createLogger({
       exitOnError: false,
       level: logType,
       transports: transports
