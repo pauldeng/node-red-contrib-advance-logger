@@ -14,7 +14,7 @@ module.exports = function (RED) {
     var consoleLog = config.console;
     var debugLog = config.debug;
     var complete = config.complete;
-    var datePattern = config.datePattern || 'yyyy-MM-dd.';
+    var datePattern = config.datePattern || 'YYYY-MM-DD.';
     var logType = config.logtype;
     var transports = [];
 

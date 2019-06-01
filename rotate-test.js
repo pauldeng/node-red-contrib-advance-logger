@@ -10,8 +10,8 @@ var logger = new winston.createLogger({
             prettyPrint : true 
         }),
         new (winston.transports.DailyRotateFile)({
-          filename: './test/log',
-          datePattern: 'yyyy-MM-dd-HH-mm.',
+          filename: './test/%DATE%.log',
+          datePattern: 'YYYY-MM-DD',
           prepend: true,
           level: 'info'
         })
